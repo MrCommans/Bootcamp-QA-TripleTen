@@ -1,0 +1,33 @@
+A equipe desenvolveu a primeira versão do aplicativo Urban Lunch. Ele é um aplicativo de Android que permite que os clientes peçam comida de diferentes restaurantes da cidade e, depois, coletem os pedidos em um dos pontos de coleta. Sua tarefa é testar este aplicativo.
+
+Aqui está um resumo de como o processo funciona:
+
+https://youtu.be/uTwYPBGLox8
+Sua tarefa
+Leia os requisitos do aplicativo Urban Lunch para se certificar de que você se familiarizou com eles. Os layouts estão no Figma. Se houver alguma diferença entre os layouts e os requisitos, use os requisitos;
+Faça um checklist de testes para o aplicativo Urban Lunch. Os requisitos em que você precisa focar estão destacados com um fundo amarelo. Copie este modelo para o seu Google Drive, como de costume, e use-o no seu checklist. Se necessário, visualize os requisitos em mapas mentais ou fluxogramas. Você não precisa entregar a visualização;
+Faça download do aplicativo Urban Lunch e instale-o em um dispositivo do seu emulador. Use o Pixel 5 que você criou durante o sprint;
+Teste o aplicativo no emulador e crie relatórios de bug no Jira para qualquer erro que você encontrar. Durante o teste, marque os resultados como: APROVADO ou REPROVADO. Se o resultado do teste foi REPROVADO, lembre-se de adicionar um link para o seu relatório de bug na coluna correspondente da tabela;
+(Opcional) Escreva um relatório de teste. O que você pode relatar para a equipe sobre o status do teste da parte testada do produto? Esta parte da tarefa não precisa ser entregue. Ela não vai afetar o resultado do projeto final, mas é um bom exercício.
+Como enviar o seu projeto
+Digite os resultados dos seus testes na cópia do modelo que você criou na Parte 2 da tarefa. Não se esqueça de mudar o nome do documento, substituindo o nome de exemplo ("João Silva") pelo seu nome.
+
+Permita que todos com acesso ao link possam comentar e anexe o link à plataforma na aba "Revisão". Sem acesso, o seu projeto não pode ser revisado.
+
+Antes de enviar seu trabalho para revisão, confira este checklist.
+
+Espere o revisor verificar e comentar
+
+O revisor irá verificar a tarefa dentro de 72 horas. Se houver alguma observação, o projeto será enviado de volta para você para revisão. Você tem 72 horas para revisar e reenviar o projeto.
+
+Como o seu projeto é avaliado:
+
+Os checklists estão bem organizados e os testes foram projetados minuciosamente;
+Os testes foram bem realizados e todas as verificações projetadas foram executadas;
+Quais bugs foram detectados e se foram relatados corretamente.
+O que acontece depois do primeiro feedback?
+
+Leia o feedback e tente corrigir seu projeto de acordo com os apontamentos do revisor. Na maioria dos casos, você terá até 48 horas para fazer as alterações necessárias. Enquanto estiver fazendo isso, você também pode anotar suas perguntas, sugestões e comentários. Eles podem ser incluídos no final do documento, mas certifique-se de que estejam destacadas para o revisor;
+Quando tudo estiver pronto, reenvie o projeto na plataforma compartilhando o link;
+A segunda revisão também irá acontecer dentro de 72 horas. O revisor irá verificar o seu projeto novamente e responder a quaisquer perguntas que você tenha incluído. Se alguma das respostas não estiver clara, por favor, entre em contato com um tutor para mais explicações;
+Se não tiver nenhum comentário e seu projeto for aceito, está tudo pronto! Você pode prosseguir e trabalhar no próximo sprint.
