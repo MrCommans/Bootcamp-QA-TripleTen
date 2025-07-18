@@ -1,0 +1,39 @@
+Projeto 1: teste de regressão do Urban Routes
+
+O Urban Routes é um aplicativo que cria rotas e calcula o tempo e custo da viagem para diferentes tipos de transporte.
+
+A interface é bem simples: há dois campos para endereços, "De" e "Para". Além disso, há três modos ("Optimal," "Flash" e "Personal"), bem como ícones para os tipos de transporte (o carro do próprio usuário, a pé, táxi, bicicleta, scooter ou compartilhamento de carro).
+
+Depois que o usuário envia seus locais "De" e "Para", o aplicativo recebe essas informações como pontos "A" e "B". Depois disso, ele calcula o tempo e custo total da viagem usando um algoritmo específico.
+
+O que você precisa fazer
+A equipe de QA preparou casos de teste para o teste de regressão do Urban Routes. Seu objetivo é executá-los e definir um status apropriado para cada teste. Como qualquer outro aplicativo, o Urban Routes tem vários bugs. Se nossos usuários tiverem uma experiência ruim, vão escrever avaliações ruins e provavelmente vão preferir usar outros aplicativos. É por isso que precisamos encontrar os bugs e enviá-los aos desenvolvedores para correção o mais rápido possível.
+
+Como analista de QA, você vai testar o aplicativo. Suas principais funções:
+
+Encontrar bugs (ou seja, a diferença entre os resultados esperados e reais)
+Relatar todos os bugs encontrados
+
+2. Executar casos de teste
+Sua tarefa é realizar todos os testes descritos no modelo.
+
+Os casos de teste no modelo estão formatados como uma tabela e possuem os seguintes campos:
+
+ID — é um valor exclusivo para identificar cada caso de teste.
+Nome do caso de teste — é o nome do caso.
+Pré-condição — é o estado inicial que deve ser definido para executar o teste; por exemplo, "o mapa deve ser aberto".
+Descrição da etapa — essas 2 colunas possuem informações sobre as ações tomadas durante a verificação de um recurso ou objeto específico. Talvez existam várias etapas. Se houver, a coluna Etapa é usada para numerá-las.
+Resultado esperado — esse é o resultado esperado após cada etapa.
+Estes são os campos que você precisa preencher:
+
+Status — aqui você vai colocar o resultado da execução do caso de teste. Use um dos seguintes status: Aprovado, Reprovado, Ignorado.
+ID do bug — se o caso de teste falhar, você vai precisar criar um relatório de bug (veja a próxima parte, "Criar relatórios de bug") e especificar os IDs.
+Use a versão mais recente do Google Chrome para isso.
+
+3. Criar relatórios de bugs
+Para documentar os bugs encontrados, use a aba "Relatórios de bug" do mesmo modelo. Você precisa preencher em todos os campos: ID, título, etapas, resultados esperado e real e prioridade.
+
+🗒️Observação: embora possa parecer muita coisa, quase todas essas informações (excluindo os resultados reais) podem ser encontradas nos casos de teste.
+
+Para a prioridade, use um dos seguintes valores: Bloqueador, Crítico, Grande, Pequeno ou Trivial.
+
