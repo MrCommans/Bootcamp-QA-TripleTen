@@ -1,0 +1,17 @@
+1. Defina as classes de equivalência e valores-limite, e escolha os valores de teste
+Nessa tarefa, você vai definir as classes de equivalência e valores-limite para três campos: "Nome", "Sobrenome" e "Data de nascimento".
+
+
+
+Leia a seção "Adicionar carteira de motorista" dos requisitos.
+Defina as classes de equivalência.
+Defina os valores-limite para cada classe, se aplicável.
+Escolha os valores de teste que verificam cada classe e seus limites, se houver.
+💡 Não se esqueça de incluir valores de teste para cenários negativos. Eles precisam ser divididos em classes, assim como os valores para cenários positivos.
+
+Conclua essa tarefa na aba "Classes de equivalência" do modelo. Observe que o modelo mostra apenas a estrutura. O número de linhas não está relacionado ao número de classes e verificações que você tem que escrever.
+
+2. Escreva os casos de teste conforme os valores de teste escolhidos
+Use os valores de teste escolhidos na tarefa anterior para escrever casos de teste para o campo "Nome". Você não precisa escrever casos de teste para outros campos.
+
+Escreva seus casos de teste na aba "Casos de teste" do modelo.
