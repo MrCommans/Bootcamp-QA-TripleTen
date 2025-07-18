@@ -1,0 +1,128 @@
+Este projeto consiste em duas partes. Você vai trabalhar no console com logs e em um banco de dados para um aplicativo de táxi. Para ambas as tarefas, este modelo vai ser útil.
+
+Gerar uma chave pública ex: $ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC9nrUowd5r8IwjwBgqe6CbGO8jD3SVtTFWozVX7dmDP6mPkoyeM8qcknkOR7MQ0b3UlELjnObcZrwHlVdo8bD4Cncb7cvG0HTRUsTGsFkwvA0o4GoDXA+Ukw6MBCC54bVNAyjYueH9fFjnQ1dQg3n8/VAm3tstl/WW5Ve8bO6vIsiW+DDyxL9ygerVK1WHU6/DILSEEzTMIJTVFXgfGjKlECris0mSxu4ryrlgX+VNMOAFh7PvLVdxbQ21QmJmQPEdYNurijYKnLTBjkcaeIIDnXbbLxwUhDNhtU0O7icxMmUE+0CoDuDAMNvXH/k/M5gvKUSKeZZrghlbaijOie84Ewp9OH8xi9KugHr9FnP9zeyIs9u9jZgEN7twep6RT7sPX98nsGL3FhMtmz9irlPWwBW4zvUcJwnepy6rrwLhuDOEOkGsJ3xX/K4JNdc6XTWRgoWvgkuQlRVKO6y3/mW3TLTen6Q98N4OkiR26xNlQwATxdm+t1Nlfc9WssB4FdE= Commans@PCBALA
+Iniciar na plataforma: Ótimo, seu servidor foi iniciado!
+
+Nome de usuário: cnt-ff2bfa7e-a65f-4674-bdca-977e36367e23
+
+Host: containerhub.tripleten-services.com
+
+Port: 4554
+
+Console
+Tarefa 1
+Os desenvolvedores enviaram uma tarefa: você precisa descobrir quais solicitações vieram de um endereço IP. Um endereço IP é composto por quatro números separados por pontos. Você precisa de endereços que começam com "233.201."
+
+Os logs estão em um servidor remoto em logs/2019/12. Você não sabe o dia em que o bug ocorreu.
+
+A sua tarefa é descobrir quais solicitações foram enviadas.
+
+Aqui está o que você precisa anexar à resposta:
+
+O comando que você usou para obter os registros necessários
+As strings adequadas, por exemplo: 184.79.247.161 - - [30/12/2019:21:38:13 +0000] "PUT /alerts HTTP/1.1" 400 3557
+Tarefa 2
+Um bug foi detectado no sistema. Ele estava ativo em 30/12/2019. Naquele período, ocorreram erros 400 e erros 500. A sua tarefa é salvar os logs desse período em um arquivo separado.
+
+Depois, você precisa colocar esses logs em arquivos separados com base no erro. Faça da seguinte forma:
+
+Crie um diretório chamado bug1 no diretório de usuário do servidor remoto;
+Coloque todas as solicitações que ocorreram no arquivo main.txt no diretório bug1;
+No diretório bug1, crie um diretório events;
+No diretório events, crie arquivos para os erros 400 e 500. Nomeie esses arquivos 400.txt e 500.txt, respectivamente. Identifique os registros neles com o erro correspondente do arquivo main.txt.
+Aqui está o que você precisa anexar à resposta:
+
+Os comandos que criaram os diretórios bug1 e events;
+Os comandos que você usou para selecionar os registros específicos para o arquivo main.txt;
+Os comandos que você usou para colocar os registros do main.txt nos arquivos 400.txt e 500.txt;
+Os textos dos arquivos 400.txt e 500.txt.
+Banco de dados
+Descrição dos dados
+Banco de dados das corridas de táxi de Chicago:
+
+A tabela neighborhoods — informações sobre os bairros da cidade:
+
+neighborhood_id — código dos bairros
+name — nome dos bairros
+A tabela cabs — informações sobre os táxis:
+
+cab_id — código único do veículo
+vehicle_id — identificador técnico do veículo
+company_name — a empresa proprietária do veículo
+A tabela trips — informações sobre as corridas:
+
+trip_id — código da corrida
+cab_id — código do carro usado para a corrida
+start_ts — data e hora do início da corrida (tempo arredondado para a hora mais próxima)
+end_ts — data e hora do fim da corrida (tempo arredondado para a hora mais próxima)
+duration_seconds — a duração da corrida em segundos
+distance_miles — a distância percorrida em milhas
+pickup_location_id — o código do bairro onde a corrida foi iniciada
+dropoff_location_id — o código do bairro onde a corrida foi encerrada
+Tabela weather_records — informações sobre o clima:
+
+record_id — código do registro de observação meteorológica
+ts — data e hora da observação (arredondada para a hora mais próxima)
+temperature — temperatura no momento da observação
+description — uma breve descrição das condições climáticas (por exemplo, chuva leve ou nuvens esparsas)
+Layout da Tabela
+4.2.2.svg
+
+Não existe uma ligação direta entre as tabelas trips e weather_records no banco de dados. Você pode vincular essas tabelas pelo horário de início (trips.start_ts) e momento das observações climáticas (weather_records.ts).
+
+Tarefa 1
+Você tem um banco de dados com corridas de táxi. O plano era ter 10.550 veículos disponíveis, o que atenderia a demanda dos usuários, mas a equipe recebeu muitas reclamações de que não havia carros suficientes disponíveis. Quantos táxis realmente estavam nas ruas? As informações sobre todos os carros disponíveis estão na tabela cabs.
+
+Vá para o servidor remoto;
+Conecte-se ao banco de dados chicago_taxi usando o nome de usuário morty e a senha smith;
+Conte o número total de carros na tabela cabs. Tenha em mente que um carro pode pertencer a diferentes empresas.
+Aqui está o que você precisa anexar à resposta:
+
+O número de carros;
+A solicitação que você usou para resolver o problema.
+Tarefa 2
+Conte o número de carros em cada empresa da tabela cabs. Ordene os valores em ordem decrescente. A equipe acredita que algumas empresas não disponibilizaram carros suficientes.
+
+Liste as empresas com menos de 100 carros. Chame o campo com o número de carros cnt e o campo com o nome da empresa — company_name.
+
+Para resolver o problema, use o operador HAVING, um análogo do WHERE para funções de agregação. Estude a documentação para aprender como este operador funciona:
+
+https://postgrespro.com/docs/postgrespro/11/queries-table-expressions
+
+Aqui está o que você precisa anexar à resposta:
+
+Uma lista das empresas com menos de 100 carros;
+A solicitação que você usou para resolver o problema.
+Observação: o console exibe uma lista incompleta. Para visualizar a lista completa, pressione Enter ou use as setas em seu teclado.
+
+Tarefa 3
+O aplicativo de táxi calcula o coeficiente do custo da corrida. Se o clima estiver bom, o valor do coeficiente será 1. Se houver chuva ou uma tempestade, o coeficiente aumenta para 2. A equipe desconfia que há um erro no cálculo do coeficiente. Para verificar o cálculo do coeficiente, a equipe precisa de uma seleção de dados: o desenvolvedor pode comparar o coeficiente com os dados nos logs e corrigir o erro. Sua tarefa é fazer a seleção.
+
+Para fazer isso:
+
+Obtenha uma descrição das condições meteorológicas da tabela weather_records para cada hora;
+Divida todas as horas em dois grupos usando o operador CASE: use Bad se o campo description contiver as palavras rain (chuva) ou storm (tempestade), e Good para todas as outras horas;
+Nomeie o campo resultante weather_conditions.
+A tabela resultante deve ter dois campos: data e hora (ts), e condições climáticas (weather_conditions).
+
+Faça uma seleção para o período de 2017-11-05 00:00:00 a 2017-11-05 23:59:59.
+
+Aqui está o que você precisa anexar à resposta:
+
+A tabela resultante com os dados para o período especificado;
+A solicitação que ajudou a resolver o problema.
+Tarefa 4
+Após atualizar o software, as empresas de táxi relataram que o lucro recebido não correspondia com os dados fornecidos pelo aplicativo. A equipe de desenvolvimento sugere que o problema pode estar nos dados sobre o número de corridas.
+
+Para determinar se há um erro, você precisa obter uma seleção do número de corridas de cada empresa de táxi em 15 e 16 de novembro de 2017.
+
+Retorne o campo company_name. Nomeie o campo com o número de corridas trips_amount e o retorne;
+Ordene os resultados obtidos no campo trips_amount em ordem decrescente.
+Dica: para resolver o problema, conecte as tabelas cabs e trips.
+Aplique as funções de agregação com o agrupamento. Não se esqueça de escrever a construção com uma condição.
+
+Aqui está o que você precisa anexar à resposta:
+
+A tabela resultante com os dados para o período especificado;
+A solicitação que ajudou a resolver o problema.
