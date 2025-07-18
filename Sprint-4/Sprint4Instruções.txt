@@ -1,0 +1,15 @@
+Projeto para o 4º sprint: tarefa
+Você vai testar a API. Como nos sprints anteriores, você precisa colocar os resultados das tarefas no Google Docs e anexar o link na plataforma. Para ambas as tarefas, este modelo vai ser útil.
+
+Os desenvolvedores adicionaram um novo recurso API do Urban.Grocers, e uma nova versáo da API foi passada para você testar. Aqui estão os requisitos do back-end.
+Requisitos dos novos recursos
+A nova funcionalidade cobre diversas áreas:
+
+Trabalho com kits: a capacidade de adicionar produtos a um kit. O endpoint é POST /api/v1/kits/{id}/products. Use a parte "Main.Kits" no apiDoc para mais informações. O endpoint vai retornar 400 Bad Request quando o comprimento da lista de produtos resultantes (não as quantidades cumulativas de cada produto) exceder 30.
+Trabalho com serviços de entrega: a capacidade de verificar se o serviço de entrega Order and Go está disponível e quanto custa. O endpoint é POST /order-and-go/v1/delivery. Consulte os requisitos na parte "Couriers" (Serviços de entrega)" do apiDoc e calcule o preço de envio.
+A tarefa
+Analisar os requisitos para a nova funcionalidade do back-end do Urban.Grocers. Estude a documentação da API no Apidoc. Os requisitos do back-end estão aqui.
+Projetar os testes em um checklist para abordar as funcionalidades que precisam ser testadas. Você pode encontrá-la acima. Você não precisa testar a autorização.
+Colocar o checklist em uma planilha do Google. Crie uma cópia do modelo. Nas configurações de compartilhamento, escolha "Qualquer um com o link" → "Pode comentar".
+Testar a API através do Postman e enviar relatórios de bug ao Jira caso seja necessário.
+Escrever um relatório de teste (*). O que você pode falar à equipe sobre o status de teste da parte testada do produto
