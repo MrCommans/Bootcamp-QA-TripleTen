@@ -1,0 +1,53 @@
+O que você precisa testar
+Neste projeto, você vai testar a funcionalidade compartilhamento de carro em dois ambientes:
+
+Google Chrome, resolução de tela 800x600
+Firefox, resolução de tela 1920x1080
+Analise os designs e os requisitos do compartilhamento de carro. Se os requisitos e designs não corresponderem, concentre-se nos requisitos.
+Primeiro, você precisa preparar a documentação de teste para o layout e a funcionalidade do formulário de reserva, depois realizar os testes.
+
+Estude e analise com atenção os designs do compartilhamento de carro no Figma, na aba "Rotas de carsharing" antes de começar.
+
+
+
+O projeto consiste em 5 etapas obrigatórias e 1 etapa adicional bônus.
+
+1. Criar um checklist para o layout do formulário de reserva
+Escolha só uma opção de corrida, por exemplo, "Luxury".
+Preste atenção à ortografia, disposição dos elementos e a aparência deles. Não se esqueça do mapa de navegação, que está localizado na parte central da interface.
+Não se esqueça dos pop-ups: "Carro reservado", "Você tem certeza que quer cancelar sua viagem?" e "Viagem cancelada".
+❗ A validação do campo, bem como o layout das janelas "Adicionar a carteira de motorista", "Método de pagamento" e "Adicionar cartão" não precisam ser testados.
+
+Coloque o checklist na primeira aba da sua planilha: "1. Checklist do layout."
+
+2. Criar um checklist para a funcionalidade das janelas "Método de pagamento" e Adicionar cartão"
+Para fazer isso, você vai precisar das seções correspondentes dos requisitos: o campo "Método de pagamento" e a janela "Adicionar cartão".
+
+Para criar um checklist, use o particionamento de classes de equivalência e análise de valores-limite.
+Não se esqueça dos testes positivos e negativos.
+Coloque o checklist na segunda aba da sua planilha: "2. Checklist para "Método de pagamento" e "Adicionar cartão."
+
+3. Preparar os casos de teste para o botão "Reservar"
+Veja a seção "Botão Reservar" nos requisitos. Não se esqueça dos testes positivos e negativos.
+
+❗ Observe que:
+
+A distância e o tempo de viagem são mostrados no botão "Reservar". Por exemplo: "A rota é de [3] quilômetros e vai levar [4] minutos." Você não precisa verificar se esses dados são calculados corretamente.
+Você também não precisa testar o cronômetro que mostra o tempo de espera gratuito.
+Coloque os casos de teste na terceira aba da planilha: "3. Casos de teste para o botão "Reservar".
+
+4. Preparar os casos de teste para a função de locação de carro
+Consulte a seção "Reservar carro" dos requisitos. Não se esqueça dos testes positivos e negativos.
+
+Coloque os casos de teste na quarta aba da planilha: "4. Casos de teste para locação."
+
+5. Testar o aplicativo e escrever relatórios de bug
+Teste o recurso de compartilhamento de carro usando os checklists e casos de teste que projetou. Use apenas duas configurações de ambiente:
+
+Google Chrome, resolução de tela 800x600
+Firefox, resolução de tela 1920x1080
+O teste de layout deve ser realizado em ambos os ambientes. A lógica do aplicativo deve ser verificada apenas em um ambiente.
+
+❗ Observe que os requisitos dizem que após o preenchimento do campo "Adicionar carteira de motorista", um cronômetro de 30 segundos é ativado. A implementação atual do aplicativo não tem esse recurso, então você não precisa esperar cada vez que fizer um teste.
+
+Ao executar os testes, marque os resultados como APROVADO ou REPROVADO. Se o teste tiver o status REPROVADO, escreva um relatório de bug no Jira. Lembre-se de inserir o ID na planilha correspondente: há uma coluna "Link do relatório de bug" em cada aba.
